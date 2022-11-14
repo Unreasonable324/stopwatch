@@ -3,9 +3,9 @@ const start = document.querySelector('#start')
 
 let timezero = 95
 
-function startgame(){
-    setInterval(increaseTime, 1000)
-    setTime(timezero)}
+// function startgame(){
+//     setInterval(increaseTime, 1000)
+//     setTime(timezero)}
     
 
 start.addEventListener('click', function increaseTime() {
