@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>stopwatch</title>
+    <script src="https://kit.fontawesome.com/ef7b626c97.js" crossorigin="anonymous"></script>
+    <title>Stopwatch</title>
 </head>
+
 <body>
     <div class="stopwatch">Секундомер
         <div class="time" id="time">00:00:00:00:00.00</div>
-        <button class="btn" id="start">Start</button>
-        <button class="btn" id="pause">Pause</button>
-        <button class="btn" id="reset">Reset</button>
+        <div class="buttons">
+            <button class="btn" id="start"><i class="fa-solid fa-play"></i></button>
+            <button class="btn dp" id="pause"><i class="fa-solid fa-pause"></i></button>
+            <button class="btn" id="circle"><i class="fa-solid fa-clock-rotate-left"></i></i></button>
+            <button class="btn" id="reset"><i class="fa-solid fa-stop"></i></button>
+        </div>
         <ul class="ol" id="ol"></ul>
     </div>
-    
     <script src="app.js"></script>
 </body>
+
 </html>

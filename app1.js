@@ -12,12 +12,12 @@ let year = 0
 let t = null;
 
 function increaseTime() {
-    ++mlsec 
+    ++mlsec
     if (mlsec >= 100) {
         mlsec = 0
-        ++sec 
+        ++sec
         if (sec >= 60) {
-            sec = 0 
+            sec = 0
             ++min
             if (min >= 60) {
                 min = 0
@@ -26,7 +26,7 @@ function increaseTime() {
                     hrs = 0
                     ++day
                     if (day >= 365) {
-                        day = 0 
+                        day = 0
                         ++year
                     }
                 }
@@ -37,86 +37,88 @@ function increaseTime() {
 
 function display() {
     increaseTime()
-        time.textContent = 
-        (year > 9 ? year: '0' + year)
-        + ':' + 
-        (day > 9 ? day: '0' + day)
-        + ':' + 
-        (hrs > 9 ? hrs: '0' + hrs)
-        + ':' + 
-        (min > 9 ? min: '0' + min)
-        + ':' + 
-        (sec> 9 ? sec: '0' + sec)
-        + '.' + 
-        (mlsec> 9 ? mlsec: '0' + mlsec);
-} 
+    time.textContent =
+        (year > 9 ? year : '0' + year)
+        + ':' +
+        (day > 9 ? day : '0' + day)
+        + ':' +
+        (hrs > 9 ? hrs : '0' + hrs)
+        + ':' +
+        (min > 9 ? min : '0' + min)
+        + ':' +
+        (sec > 9 ? sec : '0' + sec)
+        + '.' +
+        (mlsec > 9 ? mlsec : '0' + mlsec);
+}
 
 function timer() {
     if (t == null) {
-    t = setInterval (display, 10)
+        t = setInterval(display, 10)
     }
 }
 
 function createScore() {
-    const score = document.createElement ('li')
+    const score = document.createElement('li')
     score.classList.add('score')
     score.id = ('aaa')
     ol.append(score)
-    score.textContent = 
-    (year > 9 ? year: '0' + year)
-    + ':' + 
-    (day > 9 ? day: '0' + day)
-    + ':' + 
-    (hrs > 9 ? hrs: '0' + hrs)
-    + ':' + 
-    (min > 9 ? min: '0' + min)
-    + ':' + 
-    (sec> 9 ? sec: '0' + sec)
-    + '.' + 
-    (mlsec> 9 ? mlsec: '0' + mlsec);
+    score.textContent =
+        (year > 9 ? year : '0' + year)
+        + ':' +
+        (day > 9 ? day : '0' + day)
+        + ':' +
+        (hrs > 9 ? hrs : '0' + hrs)
+        + ':' +
+        (min > 9 ? min : '0' + min)
+        + ':' +
+        (sec > 9 ? sec : '0' + sec)
+        + '.' +
+        (mlsec > 9 ? mlsec : '0' + mlsec);
 }
 
 let ol = document.querySelector('#ol')
 // let li = document.querySelector('#aaa')
-function deleteLI (){
+function deleteLI() {
 // все три метода работают
 // 1    ol.innerHTML = ''
 
-/*2*/    while(ol.firstChild){
+/*2*/    while (ol.firstChild) {
         ol.removeChild(ol.lastChild)
     }
 
-// 3    ol.querySelectorAll('*').forEach((n) => n.remove())
+    // 3    ol.querySelectorAll('*').forEach((n) => n.remove())
 }
 
 window.onload = () => {
 
     start.addEventListener('click', () => {
-        
-        timer()})
+
+        timer()
+    })
     pause.addEventListener('click', () => {
-        if(t != null) {
+        if (t != null) {
             clearInterval(t)
             t = null
-        }  
+        }
         createScore()
     })
 
     reset.addEventListener('click', () => {
-        if(t != null) {
+        if (t != null) {
             clearInterval(t)
             t = null
         }
         time.textContent = `00:00:00:00:00.00`
-                                    mlsec = 0
-                                sec = 0
-                            min = 0
-                        hrs = 0
-                    day = 0
-                year = 0
-                deleteLI ()
-                
-            console.log(reset);}
-            
-        )
+        mlsec = 0
+        sec = 0
+        min = 0
+        hrs = 0
+        day = 0
+        year = 0
+        deleteLI()
+
+        console.log(reset);
+    }
+
+    )
 }
