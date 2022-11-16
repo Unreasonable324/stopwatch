@@ -34,7 +34,7 @@ body{
 .btn{
     font-size: 25px;
     width: 85px;
-    height: 35px;
+    height: 29%;
     border-radius: 10px;
     border: 2px solid rgba(0, 0, 0, 0.301);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
