@@ -5,9 +5,9 @@ body{
 }
 .stopwatch{
     position: absolute;
-    top: 50%;
+    margin-top: 10px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     text-align: center;
     
 }
@@ -49,4 +49,12 @@ body{
 .btn:active{
     background-color: #c2c2c6;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.score{
+    list-style-type: none;
+    border-top: 2px solid;
+}
+.ol{
+    padding: 0;
 }
