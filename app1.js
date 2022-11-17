@@ -77,7 +77,6 @@ function createScore() {
 }
 
 let ol = document.querySelector('#ol')
-// let li = document.querySelector('#aaa')
 function deleteLI() {
 // все три метода работают
 // 1    ol.innerHTML = ''

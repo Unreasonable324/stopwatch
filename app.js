@@ -62,7 +62,7 @@ function createScore() {
     const score = document.createElement('li')
     score.classList.add('score')
     score.id = ('aaa')
-    ol.append(score)
+    ol.prepend(score)
     score.textContent =
         (year > 9 ? year : '0' + year)
         + ':' +
