@@ -17,6 +17,7 @@ body {
     border: 2px solid rgb(65, 51, 210);
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     color: #fff;
+    user-select: none;
     font-size: 28px;
     font-family: 'JetBrains Mono', monospace;
 
@@ -37,19 +38,35 @@ body {
     width: 85px;
     height: 20%;
     border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.301);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+    border: 2px solid rgba(0, 0, 0, 0.568);
     background-color: #e1e1e7;
+    cursor: pointer;
+    user-select: none;
+
 }
 
-.btn:hover {
-    background-color: #c2c2c6;
-    box-shadow: 0px 0px 22px 3px rgba(34, 60, 80, 0.2) inset;
+@media (min-width: 768px) {
+    .btn:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    .btn:hover {
+        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+            -4px -4px 6px 0 rgba(116, 125, 136, .5),
+            inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+            inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+    }
 }
+
+
 
 .btn:active {
     background-color: #c2c2c6;
-    box-shadow: 0px 0px 22px 3px rgba(34, 60, 80, 0.4) inset;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
 .score {
