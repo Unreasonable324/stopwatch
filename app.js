@@ -4,6 +4,8 @@ const pause = document.querySelector('#pause')
 const reset = document.querySelector('#reset')
 const circle = document.querySelector('#circle')
 
+
+// lkd;ka;dk;alkd;ka;dka;lskd;askld
 let mlsec = 0
 let sec = 0
 let min = 0
