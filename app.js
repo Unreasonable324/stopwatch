@@ -10,28 +10,28 @@ const circle = document.querySelector('#circle')
 let mlsec = 0
 let sec = 0
 let min = 0
-let hrs = 20
+let hrs = 0
 let day = 0
 let year = 0
 let t = null;
 
 function increaseTime() {
-    --mlsec
-    if (mlsec <= 0) {
-        mlsec = 99
-        --sec
-        if (sec <= 0) {
-            sec = 59
-            --min
-            if (min <= 0) {
-                min = 59
-                --hrs
-                if (hrs <= 0) {
-                    hrs = 23
-                    --day
-                    if (day <= 0) {
-                        day = 364
-                        --year
+    ++mlsec
+    if (mlsec >= 100) {
+        mlsec = 0
+        ++sec
+        if (sec >= 60) {
+            sec = 0
+            ++min
+            if (min >= 60) {
+                min = 0
+                ++hrs
+                if (hrs >= 24) {
+                    hrs = 0
+                    ++day
+                    if (day >= 365) {
+                        day = 0
+                        ++year
                     }
                 }
             }
